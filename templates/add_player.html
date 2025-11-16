@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+  <h2>Add New Player</h2>
+  <form method="POST">
+    <div class="row g-3">
+      <div class="col-12 col-md-6">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" id="name" name="name" class="form-control" required>
+      </div>
+      <div class="col-12 col-md-6">
+        <label for="position" class="form-label">Position</label>
+        <select id="position" name="position" class="form-control" required>
+          {% set positions = ['Goalkeeper', 'Defender', 'Midfielder', 'Forward'] %}
+          {% for pos in positions %}
+            <option value="{{ pos }}">{{ pos }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="col-12 col-md-4">
+        <label for="age" class="form-label">Age</label>
+        <input type="number" id="age" name="age" class="form-control" required>
+      </div>
+      <div class="col-12 col-md-4">
+        <label for="appearances" class="form-label">Appearances</label>
+        <input type="number" id="appearances" name="appearances"
+               class="form-control" required>
+      </div>
+      <div class="col-12 col-md-4">
+        <label for="goals" class="form-label">
+          Goals (Midfielders & Forwards)
+        </label>
+        <input type="number" id="goals" name="goals" class="form-control">
+      </div>
+      <div class="col-12 col-md-4">
+        <label for="assists" class="form-label">Assists</label>
+        <input type="number" id="assists" name="assists" class="form-control">
+      </div>
+      <div class="col-12 col-md-4">
+        <label for="clean_sheets" class="form-label">
+          Clean Sheets (Goalkeepers & Defenders)
+        </label>
+        <input type="number" id="clean_sheets" name="clean_sheets"
+               class="form-control">
+      </div>
+    </div>
+    <div class="mt-4">
+      <button type="submit" class="btn btn-primary">Add Player</button>
+    </div>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,81 @@
+:root {
+  --mu-red: #DA291C;
+  --mu-dark-red: #A50000;
+  --mu-light-gray: #F8F9FA;
+  --mu-white: #FFFFFF;
+  --mu-gold: #FFD700;
+}
+
+/* page background */
+body {
+  background-color: var(--mu-light-gray);
+}
+
+/* headings in dark red */
+h2, h3 {
+  color: var(--mu-dark-red);
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--mu-red) !important;
+}
+.navbar-brand,
+.navbar .btn {
+  color: var(--mu-white) !important;
+}
+
+/* Primary Buttons (Add/Edit) */
+.btn-primary {
+  background-color: var(--mu-red);
+  border-color: var(--mu-dark-red);
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--mu-dark-red);
+  border-color: var(--mu-red);
+}
+
+/* Danger Buttons (Delete) */
+.btn-danger {
+  background-color: var(--mu-dark-red);
+  border-color: var(--mu-red);
+}
+.btn-danger:hover,
+.btn-danger:focus {
+  background-color: var(--mu-red);
+  border-color: var(--mu-dark-red);
+}
+
+/* Table header accent */
+.table thead {
+  background-color: var(--mu-red);
+  color: var(--mu-white);
+}
+
+/* Light striping with a tint of red */
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(218, 41, 28, 0.05);
+}
+
+/* Form focus outlines in red */
+.form-control:focus {
+  border-color: var(--mu-red);
+  box-shadow: 0 0 0 0.2rem rgba(218, 41, 28, 0.25);
+}
+
+/* Links */
+a {
+  color: var(--mu-dark-red);
+}
+a:hover {
+  color: var(--mu-red);
+  text-decoration: none;
+}
+
+/* Ensure the navbar logo never grows past 40px tall */
+.navbar-logo {
+  max-height: 40px;
+  width: auto;
+  display: block;
+}
